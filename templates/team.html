@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+        <!-- Page Banner Start -->
+        <div class="section page-banner-section" style="background-image: url({% static 'images/bg/team.png' %});">
+            <div class="container">
+                <!-- Page Banner Wrapper Start -->
+                <div class="page-banner-wrapper">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- Page Banner Content Start -->
+                            <div class="page-banner text-center">
+                                <h2 class="title">Our Team</h2>
+                                <ul class="breadcrumb justify-content-center">
+                                    <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Our Team</li>
+                                </ul>
+                            </div>
+                            <!-- Page Banner Content End -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Page Banner Wrapper End -->
+            </div>
+        </div>
+        <!-- Page Banner End -->
+
+        <!-- Team Start -->
+        
+        <div class="section team-2-section section-padding">
+            <div class="container">
+                <!-- Team Item Wrapper Start -->
+                <div class="team-2-item-wrapper our-team-wrap">                    
+                    <div class="row">
+                        {% for team in teams %}
+                        <div class="col-lg-3 col-md-6 col-sm-6">                            
+                            <!-- Single Team Start -->                            
+                            <div class="single-team">
+                                <div class="team-img">
+                                    <a href="{% url 'team_single' team.pk %}"><img src="{{team.avatar.url}}" alt="team"></a>
+                                    <div class="team-social">
+                                        <ul>
+                                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="team-content">
+                                    <div class="team-name-deg">
+                                        <h5 class="name"><a href="{% url 'team_single' team.pk %}">{{team.username}}</a></h5>
+                                        <span class="team-deg">{{team.email}}</span>
+                                    </div>
+                                    <div class="team-share">
+                                        <span><i class="fa fa-link"></i></span>
+                                    </div>
+                                </div>
+                            </div>                            
+                            <!-- Single Team End -->
+                        </div>
+                        {% endfor %}
+                    </div>
+                    
+                </div>
+                <!-- Team Item Wrapper End -->
+            </div>
+        </div>
+        
+        <!-- Team End -->
+        
+
+        {% endblock content %}

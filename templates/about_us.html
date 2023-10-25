@@ -1,0 +1,309 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+       
+        <!-- Page Banner Start -->
+        <div class="section page-banner-section" style="background-image: url({% static 'images/bg/about.png' %});">
+            <div class="container">
+                <!-- Page Banner Wrapper Start -->
+                <div class="page-banner-wrapper">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- Page Banner Content Start -->
+                            <div class="page-banner text-center">
+                                <h2 class="title">About Us</h2>
+                                <ul class="breadcrumb justify-content-center">
+                                    <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                                </ul>
+                            </div>
+                            <!-- Page Banner Content End -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Page Banner Wrapper End -->
+            </div>
+        </div>
+        <!-- Page Banner End -->
+
+        <!-- Report Career Section Start -->
+        <div class="section report-career-2-section section-padding-02">
+            <div class="container">
+                <!-- Report Career Wrapper Start -->
+                <div class="report-career-2-wrapper">
+                    <div class="row">
+                        <div class="col-xl-7 col-lg-6">
+                            <!-- Report Career Image Start -->
+                            <div class="report-career-2-img-wrapper">
+                                <div class="report-career-2-img-sm">
+                                    <div class="report-career-2-img img-1">
+                                        <img src="{% static "images/looking.jpg" %}" alt="">
+                                    </div>
+                                    {% comment %} <div class="report-career-2-img img-2">
+                                        <img src="{% static "images/career-sm-2.jpg" %}" alt="">
+                                    </div> {% endcomment %}
+                                </div>
+                                {% comment %} <div class="report-career-2-img-big">
+                                    <img src="{% static "images/career-big2.jpeg" %}" alt="">
+                                </div> {% endcomment %}
+                            </div>
+                            <!-- Report Career Image End -->
+                        </div>
+                        <div class="col-xl-5 col-lg-6 d-lg-flex align-items-center">
+                            <!-- Report Career Content Start -->
+                            <div class="report-career-content report-career-2-content">
+                                <div class="section-title section-devider">
+                                    <h2 class="title">Welcome to Gostudy Enhance your skills with best Online courses</h2>
+                                </div>
+                                <p>You can start and finish one of these popular courses in under a day – for free! Check out the list below.. Take the course for free</p>
+                                <!-- Report Career-3 Wrapper Start -->
+                                <div class="report-career-3-wrapper">
+                                    <div class="report-career-item">
+                                        <div class="report-career-icon">
+                                            <img src="{% static "images/features/f-icon-10.png"" %} alt="">
+                                        </div>
+                                        <div class="report-career-text">
+                                            <h3 class="title">400+ Courses</h3>
+                                            <p>You can start and finish one of these popular courses in under our site</p>
+                                        </div>
+                                    </div>
+                                    <div class="report-career-item">
+                                        <div class="report-career-icon">
+                                            <img src="{% static "images/features/f-icon-11.png" %}" alt="">
+                                        </div>
+                                        <div class="report-career-text">
+                                            <h3 class="title">Lifetime Access</h3>
+                                            <p>You can start and finish one of these popular courses in under our site</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Report Career-3 Wrapper End -->
+                            </div>
+                            <!-- Report Career Content End -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Report Career Wrapper End -->
+            </div>
+        </div>
+        <!-- Report Career Section End -->
+
+        <!-- About Section Start -->
+        <div class="section about-section section-padding">
+            <div class="container">
+                <div class="about-wrapper">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="about-content">
+                                <div class="section-title section-devider">
+                                    <h2 class="title">Learn a job-relevant skill that you can use today in under 2 hours</h2>
+                                </div>
+                                <p>You can start and finish one of these popular courses in under a day for free! Check out the list below. Take the course for free</p>
+                                <div class="counter-bar">
+                                    <!-- Skill Item Start -->
+                                    {% comment %} <div class="skill-item">
+                                        <span class="title">Experience</span>
+                                        <div class="skill-bar">
+                                            <div class="bar-inner">
+                                                <div class="bar progress-line color-1" data-width="100">
+                                                    <span class="skill-percent"><span class="counter">100</span>%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> {% endcomment %}
+                                    <!-- Skill Item End -->
+                                    <!-- Skill Item Start -->
+                                    {% comment %} <div class="skill-item">
+                                        <span class="title">Courses</span>
+                                        <div class="skill-bar">
+                                            <div class="bar-inner">
+                                                <div class="bar progress-line color-2" data-width="70">
+                                                    <span class="skill-percent"><span class="counter">70</span>%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> {% endcomment %}
+                                    <!-- Skill Item End -->
+                                    <!-- Skill Item Start -->
+                                    {% comment %} <div class="skill-item">
+                                        <span class="title">Lectures</span>
+                                        <div class="skill-bar">
+                                            <div class="bar-inner">
+                                                <div class="bar progress-line color-3" data-width="90">
+                                                    <span class="skill-percent"><span class="counter">90</span>%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> {% endcomment %}
+                                    <!-- Skill Item End -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="about-img">
+                                <img src="{% static "images/study.jpg" %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About Section End -->
+
+        <!-- Testimonial Start -->
+        <div class="section testimonial-2-section section-padding" style="background-image: url({% static "images/bg/computer.jpg" %});">
+            <div class="container">
+                <div class="testimonial-2-wrapper">
+                    <!-- Section Title Start -->
+                    <div class="section-title about-testimonial-title section-devider text-center">
+                        <h2 class="title">What our clients say about us</h2>
+                    </div>
+                    <!-- Section Title End -->
+                    <!-- Testimonial Wrapper Start -->
+                    <div class="testimonial-wrapper swiper-container testimonial-active">
+                        <div class="swiper-wrapper">
+                            {% for testimony in testimonies %} 
+                            <div class="swiper-slide">
+                                <!-- Single Testimonial Start -->
+                                <div class="single-testimonial">
+                                    <div class="testimonial-img">
+                                        <img src="{{testimony.testimonies_avatar.url}}" alt="">
+                                    </div>
+                                    <div class="testimonial-content color-1">
+                                        <p>{{testimony.testimony_body|truncatewords:20}}</p>
+                                        <div class="testimonial-bottom">
+                                            <div class="name-degree">
+                                                <span class="name"> - {{testimony.testimony_name}}</span>
+                                                <span class="degree">{{testimony.university}}</span>
+                                            </div>
+                                            <span><i class="flaticon-straight-quotes"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Single Testimonial End -->
+                            </div>
+                            {% endfor %}
+
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="testimonial-arrow swiper-button-next"></div>
+                        <div class="testimonial-arrow swiper-button-prev"></div>
+
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <!-- Testimonial Wrapper End -->
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+
+        <!-- Team Start -->
+        
+        <div class="section team-2-section section-padding-02">
+            <div class="container">
+                <!-- Team Wrapper Start -->
+                <div class="team-wrapper">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <!-- Section Title Start -->
+                            <div class="section-title section-devider">
+                                <h2 class="title">Our Services</h2>
+                            </div>
+                            <!-- Section Title End -->
+                        </div>
+                        <div class="col-lg-5">
+                            {% comment %} <div class="team-text">
+                                <p>You can also join us to learn new skills from our teachers. Text of the printing Lorem dummy</p>
+                            </div> {% endcomment %}
+                        </div>
+                    </div>
+                    <!-- Team Item Wrapper Start -->
+                    <div class="team-2-item-wrapper about-team-wrap">
+                        <div class="row">
+                            {% for service in services %}
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <!-- Single Team Start -->                                
+                                <div class="single-team">
+                                    
+                                    <div class="team-img">
+                                        <img src="{{service.service_avatar.url}}" alt="team">
+                                        {% comment %} <div class="team-social">
+                                            <ul>
+                                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </div> {% endcomment %}
+                                    </div>
+                                    <div class="team-content">
+                                        <div class="team-name-deg">
+                                            <h5 class="name">{{service.service_name}}</h5>
+                                            {% comment %} <span class="team-deg">Economy</span> {% endcomment %}
+                                        </div>
+                                        {% comment %} <div class="team-share">
+                                            <span><i class="fas fa-share-alt"></i></span>
+                                        </div> {% endcomment %}
+                                    </div>
+                                    
+                                </div>
+                                <!-- Single Team End -->
+                               
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <!-- Team Item Wrapper End -->
+                </div>
+                <!-- Team Wrapper End -->
+            </div>
+        </div>
+        <!-- Team End -->
+
+        <!-- Brand Logo End -->
+        <div class="section Brand-section about-brand-section">
+            <div class="container">
+                <!-- Brand Wrapper End -->
+                <div class="brand-wrapper text-center">
+
+                    {% comment %} <div class="brand-active">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <!-- Single Brand Start -->
+                                <div class="swiper-slide single-brand">
+                                    <img src="{% static "images/brand/brand-1.png" %}" alt="Brand">
+                                </div>
+                                <!-- Single Brand End -->
+                                <!-- Single Brand Start -->
+                                <div class="swiper-slide single-brand">
+                                    <img src="{% static "images/brand/brand-2.png" %}" alt="Brand">
+                                </div>
+                                <!-- Single Brand End -->
+                                <!-- Single Brand Start -->
+                                <div class="swiper-slide single-brand">
+                                    <img src="{% static "images/brand/brand-3.png" %}" alt="Brand">
+                                </div>
+                                <!-- Single Brand End -->
+                                <!-- Single Brand Start -->
+                                <div class="swiper-slide single-brand">
+                                    <img src="{% static "images/brand/brand-4.png" %}" alt="Brand">
+                                </div>
+                                <!-- Single Brand End -->
+                                <!-- Single Brand Start -->
+                                <div class="swiper-slide single-brand">
+                                    <img src="{% static "images/brand/brand-5.png" %}" alt="Brand">
+                                </div>
+                                <!-- Single Brand End -->
+                            </div>
+                        </div>
+                    </div> {% endcomment %}
+                </div>
+                <!-- Brand Wrapper End -->
+            </div>
+        </div>
+        <!-- Brand Logo End -->
+        {% endblock content %}

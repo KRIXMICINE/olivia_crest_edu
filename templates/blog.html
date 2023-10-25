@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load social_share %}
+
+{% block content %}
+
+        <!-- Page Banner Start -->
+        <div class="section page-banner-section" style="background-image: url({% static 'images/bg/blog.png'%});">
+            <div class="container">
+                <!-- Page Banner Wrapper Start -->
+                <div class="page-banner-wrapper">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- Page Banner Content Start -->
+                            <div class="page-banner text-center">
+                                <h2 class="title">Blog</h2>
+                                <ul class="breadcrumb justify-content-center">
+                                    <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                                </ul>
+                            </div>
+                            <!-- Page Banner Content End -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Page Banner Wrapper End -->
+            </div>
+        </div>
+        <!-- Page Banner End -->
+
+        <!-- Blog Start -->
+        <div class="section blog-standard-section section-padding">
+            <div class="container">
+                <!-- Blog Wrapper Start -->
+                <div class="blog-standard-wrapper wrapper">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="blog-post-wrapper">
+                                <!-- Single Blog Post Start -->
+                                <div class="single-blog single-blog-post">
+                                    <!-- Blog Image Start -->
+                                    {% comment %} <div class="blog-post-image">
+                                        <a href="blog-details.html"><img src="{% static "images/blog/blog-1.jpg" %}" alt="blog"></a>
+                                    </div> {% endcomment %}
+                                    <!-- Blog Image End -->
+                                    {% for post in Posts %}
+                                    <!-- Blog Content Start -->
+                                    <div class="blog-content">
+                                        <div class="post-meta-wrap">
+                                            <div class="blog-author-category">
+                                                <a class="category color-1" href="{{post.category.get_url}}">{{post.category}}</a>
+                                                <div class="blog-author">
+                                                    <img src="{{post.author_avatar.url}}" alt="author" height="40" width="40">
+                                                    <h4 class="name"><a href="#">{{post.author}}</a></h4>
+                                                </div>
+                                            </div>
+                                            {% comment %} <div class="post-share-like">
+                                                <div class="post-share">
+                                                    <span class="share"><i class="flaticon-share"></i></span>
+                                                    <div class="social-share-wrapper">
+                                                        <ul>
+                                                            <li>{% post_to_twitter "New Post: {{post.title}}. Check it out!" object_or_url "Post to Twitter" %}<i class="fab fa-twitter"></i></li>
+                                                            <li>{% post_to_facebook object_or_url %}"<i class="fab fa-facebook-f"></i></li>
+                                                            <li>{% save_to_pinterest object_or_url %}<i class="fab fa-pinterest-p"></i></li>
+                                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="post-like">
+                                                    <a href="#"><i class="flaticon-heart-1"></i>
+                                                        <span>19 Likes</span>
+                                                    </a>
+                                                </div>
+                                            </div> {% endcomment %}
+                                        </div>
+
+                                        <h3 class="title"><a href="{{post.get_url}}">{{post.title}}</a></h3>
+                                        <p>{{post.intro}}</p>
+                                        <a class="read-more" href="{{post.get_url}}">Read More</a>
+                                    </div>
+                                    {% endfor %}
+                                    <!-- Blog Content End -->
+                                </div>
+                               
+
+                                <!-- Gostudy Pagination Start -->
+                                <div class="gostudy-pagination">
+                                    <ul class="pagination justify-content-center">
+                                        {% if Posts.has_previous %}
+                                        <li class="page-item active"><a class="page-link" href="?q{{query}}&page=1">&laquo; First</a>                                            
+                                        </li>
+                                        <li class="page-item active"><a class="page-link" href="?q={{query}}&page={{Posts.previous_page_number}}"> < </a>
+                                        </li>
+                                        {% endif %}
+                                        <li class="page-item" aria-current="page">
+                                            <span class="page-link">{{Posts.number}}</span>
+                                        </li>
+                                        {% if Posts.has_next %}
+                                        <li class="page-item">
+                                            <span class="page-link">
+                                            <a class="page-link" href="?q={{query}}&page={{Posts.next_page_number}}"><i class="flaticon-right-arrow"></i></a>
+                                        </span>
+                                        </li>
+                                        <li class="page-item">
+                                            <span class="page-link">
+                                            <a class="page-link" href="?q={{query}}&page={{Posts.paginator.num_pages}}"> &raquo<i class="flaticon-right-arrow"></i></a>
+                                        </li>
+                                        </span>
+                                        {% endif %}                                    
+                                    </ul>
+                                </div>
+                                <!-- Gostudy Pagination End -->
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <!-- Blog Sidebar Start -->
+                            <div class="blog-sidebar">
+                                <!-- Sidebar Widget Start -->
+                                <div class="sidebar-widget">
+                                    <!-- Widget Search Form Start -->
+                                    <form class="search-form" action="#" method="get">
+                                        <input type="text" name="q" placeholder="Search Blog...">
+                                        <button type="submit"><i class="flaticon-loupe"></i></button>
+                                    </form>
+                                    <!-- Widget Search Form End -->
+                                </div>
+                                <!-- Sidebar Widget End -->
+                                <!-- Sidebar Widget Start -->
+                                <div class="sidebar-widget">
+                                    <!-- Widget Title Start -->
+                                    <div class="widget-title">
+                                        <h3 class="title">Recent Posts</h3>
+                                    </div>
+                                    <!-- Widget Title End -->
+                                    <!-- Widget Recent Post Start -->
+                                    <div class="recent-posts">
+                                        <ul>
+                                            {% for post in Posts %}
+                                            <li>
+                                                <a class="post-link" href="{{post.get_url}}">
+                                                    {% comment %} <div class="post-thumb">
+                                                        <img src="assets/images/blog/r-post-1.jpg" alt="">
+                                                    </div> {% endcomment %}
+                                                    <div class="post-text">
+                                                        <h4 class="title">{{post.title}}</h4>
+                                                        <span class="post-meta">{{post.publish}}</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                    <!-- Widget Recent Post End -->
+                                </div>
+                                <!-- Sidebar Widget End -->
+                                <!-- Sidebar Widget Start -->
+                                <div class="sidebar-widget">
+                                    <!-- Widget Title Start -->
+                                    <div class="widget-title">
+                                        <h3 class="title">Categories</h3>
+                                    </div>
+                                    <!-- Widget Title End -->
+                                    <!-- Widget Category Start -->
+                                    <ul class="category">
+                                        <li class="cate-item"><a href="{% url 'blog' %}">All</a></li>
+                                        {% for category in links %}                    
+                                        <li class="cate-item"><a href="{{category.get_url}}">{{category.category_name}}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                    <!-- Widget Category End -->
+                                </div>
+                                <!-- Sidebar Widget End -->
+                                <!-- Sidebar Widget Start -->
+                                {% comment %} <div class="sidebar-widget">
+                                    <!-- Widget Title Start -->
+                                    <div class="widget-title">
+                                        <h3 class="title">Tag</h3>
+                                    </div>
+                                    <!-- Widget Title End -->
+                                    <!-- Widget Category Start -->
+                                    <ul class="sidebar-tag">
+                                        <li><a href="#">{{post.Tags}}</a></li>
+                                        
+                                    </ul>
+                                    <!-- Widget Category End -->
+                                </div> {% endcomment %}
+                                <!-- Sidebar Widget End -->
+                                <!-- Sidebar Widget Start -->
+                                {% comment %} <div class="sidebar-widget">
+                                    <div class="sidebar-image">
+                                        <a href="#"><img src="assets/images/blog/sidebar-img.png" alt=""></a>
+                                    </div>
+                                </div> {% endcomment %}
+                                <!-- Sidebar Widget End -->
+                            </div>
+                            <!-- Blog Sidebar End -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Wrapper End -->
+            </div>
+        </div>
+        <!-- Blog End -->
+
+{% endblock content %}
+       

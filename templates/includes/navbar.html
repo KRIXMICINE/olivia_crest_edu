@@ -1,0 +1,194 @@
+
+{% load static %}
+
+<!-- Preloader start -->
+<div class="preloader">
+    <div class="loader">
+        <div class="ytp-spinner">
+            <div class="ytp-spinner-container">
+                <div class="ytp-spinner-rotator">
+                    <div class="ytp-spinner-left">
+                        <div class="ytp-spinner-circle"></div>
+                    </div>
+                    <div class="ytp-spinner-right">
+                        <div class="ytp-spinner-circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Preloader End -->
+
+<!-- Header Start  -->
+<div id="header" class="header section">
+    <div class="container">
+
+        <!-- Header Wrapper Start  -->
+        <div class="header-wrapper">
+
+            <!-- Header Logo Start -->
+            <div class="header-logo">
+                <a href="{% url 'home' %}"><img src="{% static 'images/PhotoRoom.png' %}" alt="Logo"></a>
+            </div>
+            <!-- Header Logo End -->
+
+            <!-- Header Right Start -->
+            <div class="header-right">
+
+                <!-- Header Menu Start -->
+                <div class="header-menu d-none d-lg-block">
+                    <ul class="main-menu">
+                        <li class="active-menu">
+                            <a href="{% url 'home' %}">Home</a>
+                            {% comment %} <ul class="sub-menu">
+                                <li class="active"><a href="index.html">Home Default</a></li>
+                                <li><a href="index-2.html">Online Academy</a></li>
+                                <li>
+                                    <a href="index-3.html">Online Courses</a>
+                                </li>
+                                <li>
+                                    <a href="index-4.html">Learning Coach</a>
+                                </li>
+                                <li>
+                                    <a href="index-5.html">Home Classic</a>
+                                </li>
+                            </ul> {% endcomment %}
+                        </li>
+                        {% comment %} <li><a href="course.html">Courses</a>
+                            <ul class="sub-menu">
+                                <li><a href="course.html">Courses Grid</a></li>
+                                <li><a href="course-single.html">Single Course</a></li>
+                            </ul>
+                        </li> {% endcomment %}
+                        {% comment %} <li><a href="#">Pages</a>
+                            <ul class="sub-menu">
+                                <li><a href="{% url 'about' %}">About Us</a></li>
+                                <li><a href="{% url 'team' %}">Our Team</a></li>
+                                <li><a href="team-single.html">Team Single</a></li>
+                                <li><a href="error.html">Page 404</a></li>
+                                <li><a href="faq.html">FAQ`s</a></li>
+                            </ul>
+                        </li> {% endcomment %}
+                        <li><a href="{% url 'team' %}">Our Team</a></li>
+                        <li> <a href="{% url 'about' %}">ABOUT US</a></li>
+                        <li><a href="{% url 'blog' %}">Blog</a>
+                            {% comment %} <ul class="sub-menu">
+                                <li><a href="blog.html">Blog Grid</a></li>
+                                <li><a href="blog-standard.html">Blog Listing</a></li>
+                                <li><a href="blog-details.html">Blog Single</a></li>
+                            </ul> {% endcomment %}
+                        </li>
+                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                        <li><a href="{% url 'faq' %}">FAQ</a></li>
+                    </ul>
+                </div>
+                <!-- Header Menu End -->
+
+                <!-- Header Meta Start -->
+                {% comment %} <div class="header-meta">
+
+                    <!-- Header Search Start -->
+                    <div class="header-search d-none d-lg-block">
+                        <a class="search-btn" href="#"><i class="flaticon-loupe"></i></a>
+                        <div class="header-search-content">
+                            <form action="#" method="get">
+                                <input type="text" placeholder="Search...">
+                                <button class="close-search" type="submit"><i class="flaticon-loupe"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Header Search End -->
+                    <!-- Header Cart Start -->
+                    <div class="header-cart">
+                        <a class="cart-btn" href="#"><i class="flaticon-shopping-cart"></i></a>
+                    </div>
+                    <!-- Header Cart End -->
+                    <!-- Header Login Join Start -->
+                    <div class="header-login-join d-none d-lg-block">
+                        <a class="login" href="#">Login</a>
+                        <a class="btn join-btn" href="#">Join Now</a>
+                    </div>
+                    <!-- Header Login Join End -->
+                </div> {% endcomment %}
+                <!-- Header Meta End -->
+
+                <div class="header-toggle d-lg-none">
+                    <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <!-- Header Right End -->
+        </div>
+        <!-- Header Wrapper End -->
+
+    </div>
+</div>
+<!-- Header End -->
+
+<!-- Offcanvas Start -->
+<div class="offcanvas offcanvas-start" id="offcanvasMenu">
+
+    <div class="offcanvas-header">
+        <!-- Offcanvas Logo Start -->
+        <div class="offcanvas-logo">
+          <a href="{% url 'home' %}"><img src="{% static 'images/PhotoRoom.png' %}" alt="Logo"></a>
+        </div>
+        <!-- Offcanvas Logo End -->
+        <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+
+    <div class="offcanvas-body">
+        <div class="offcanvas-menu">
+            <ul class="main-menu">
+                <li class="active-menu">
+                    <a href="{% url 'home' %}">Home</a>
+                    {% comment %} <ul class="sub-menu">
+                        <li class="active"><a href="index.html">Home Default</a></li>
+                        <li><a href="index-2.html">Online Academy</a></li>
+                        <li>
+                            <a href="index-3.html">Online Courses</a>
+                        </li>
+                        <li>
+                            <a href="index-4.html">Learning Coach</a>
+                        </li>
+                        <li>
+                            <a href="index-5.html">Home Classic</a>
+                        </li>
+                    </ul> {% endcomment %}
+                </li>
+                {% comment %} <li><a href="course.html">Courses</a>
+                    <ul class="sub-menu">
+                        <li><a href="course.html">Courses Grid</a></li>
+                        <li><a href="course-single.html">Single Course</a></li>
+                    </ul>
+                </li> {% endcomment %}
+                {% comment %} <li><a href="#">Pages</a>
+                    <ul class="sub-menu">
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="team-single.html">Team Single</a></li>
+                        <li><a href="error.html">Page 404</a></li>
+                        <li><a href="faq.html">FAQ`s</a></li>
+                    </ul>
+                </li> {% endcomment %}
+                <li><a href="{% url 'about' %}">About Us</a></li> 
+                <li><a href="{% url 'team' %}">Our Team</a></li>
+                {% comment %} <li><a href="blog.html">Blog</a>
+                    <ul class="sub-menu">
+                        <li><a href="blog.html">Blog Grid</a></li>
+                        <li><a href="blog-standard.html">Blog Listing</a></li>
+                        <li><a href="blog-details.html">Blog Single</a></li>
+                    </ul>
+                </li> {% endcomment %}
+                <li><a href="{% url 'blog' %}">Blog</a>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                <li><a href="{% url 'faq' %}">FAQ</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Offcanvas End -->

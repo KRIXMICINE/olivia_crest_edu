@@ -1,0 +1,204 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+        <!-- Page Banner Start -->
+        <div class="section page-banner-section" style="background-image: url({% static "images/bg/team.png" %});">
+            <div class="container">
+                <!-- Page Banner Wrapper Start -->
+                <div class="page-banner-wrapper">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- Page Banner Content Start -->
+                            <div class="page-banner text-center">
+                                <h2 class="title">{{team.username}}</h2>
+                                <ul class="breadcrumb justify-content-center">
+                                    <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Our Team</li>
+                                    <li class="breadcrumb-item active" aria-current="page">{{team.username}}</li>
+                                </ul>
+                            </div>
+                            <!-- Page Banner Content End -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Page Banner Wrapper End -->
+            </div>
+        </div>
+        <!-- Page Banner End -->
+
+        <!-- Team Profile Section Start -->
+        <div class="section team-profile-section section-padding-02">
+            <div class="container">
+                <!-- Team Profile Wrapper Start -->
+                <div class="team-profile-wrapper">
+                    <!-- Team Profile Start -->
+                    <div class="team-profile">
+                        <div class="profile-img">
+                            <img src="{{team.avatar.url}}" alt="">
+                        </div>
+                        <div class="profile-content">
+                            <h3 class="name">{{team.username}}</h3>
+                            <span class="designation">{{team.position}}</span>
+                            <p>{{team.intro}}</p>
+                        </div>
+                    </div>
+                    <!-- Team Profile End -->
+                    <!-- Team Profile Info Start -->
+                    <div class="team-profile-info">
+                        <ul>
+                            {% comment %} <li class="team-info"><span>Experience:</span> 10 Years</li> {% endcomment %}
+                            <li class="team-info"><span>Email: </span> {{team.email}}</li>
+                            <li class="team-info"><span>Phone:</span> {{team.phone_number}}</li>
+                        </ul>
+                        <div class="profile-social-wrap">
+                            <ul>
+                                <li>
+                                    <a href="#" class="profile-twitter"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="profile-facebook"><i class="fab fa-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="profile-instagram"><i class="fab fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Team Profile Info End -->
+                </div>
+                <!-- Team Profile Wrapper End -->
+                <!-- Team Profile Description Start -->
+                <div class="team-profile-description">
+                    <h3 class="title">Diversity of Experiences</h3>
+                    <p>{{team.bio}}</p><br>
+                    
+                </div>
+                <!-- Team Profile Description End -->
+            </div>
+        </div>
+        <!-- Team Profile Section End -->
+
+        <!-- About Section Start -->
+        <div class="section about-section skill-section">
+            <div class="container">
+                <div class="skill-wrapper">
+                    <div class="row">
+                        {% comment %} <div class="col-lg-6">
+                            <div class="about-content skill-content">
+                                <h3 class="title">Expertise & Skills</h3>
+                                <div class="counter-bar">
+                                    <!-- Skill Item Start -->
+                                    <div class="skill-item">
+                                        <span class="title">Lectures </span>
+                                        <div class="skill-bar">
+                                            <div class="bar-inner">
+                                                <div class="bar progress-line color-1" data-width="95">
+                                                    <span class="skill-percent"><span class="counter">95</span>%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Skill Item End -->
+                                    <!-- Skill Item Start -->
+                                    <div class="skill-item">
+                                        <span class="title">My Skill</span>
+                                        <div class="skill-bar">
+                                            <div class="bar-inner">
+                                                <div class="bar progress-line color-2" data-width="50">
+                                                    <span class="skill-percent"><span class="counter">50</span>%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Skill Item End -->
+                                    <!-- Skill Item Start -->
+                                    <div class="skill-item">
+                                        <span class="title">Consulting</span>
+                                        <div class="skill-bar">
+                                            <div class="bar-inner">
+                                                <div class="bar progress-line color-3" data-width="90">
+                                                    <span class="skill-percent"><span class="counter">90</span>%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Skill Item End -->
+                                </div>
+                            </div>
+                        </div> {% endcomment %}
+                        <div class="col-lg-6">
+                            <!-- Skill Description Start -->
+                            <div class="skill-descrption">
+                                <h3 class="title">Education</h3>
+                                <p>{{team.education}}</p>
+                            </div>
+                            <!-- Skill Description End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About Section End -->
+
+
+        <!-- Team Contact Start -->
+        <div class="section team-contact-section">
+            {% comment %} <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="team-single-contact">
+                            <h3 class="title">Contact me</h3>
+                            <!-- Team Contact Form Start -->
+                            <form class="team-contact-form" action="#">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <!-- Single Form Start -->
+                                        <div class="single-form">
+                                            <input type="text" placeholder="Your Name">
+                                            <i class="flaticon-user-1"></i>
+                                        </div>
+                                        <!-- Single Form End -->
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!-- Single Form Start -->
+                                        <div class="single-form">
+                                            <input type="email" placeholder="Your Email">
+                                            <i class="flaticon-email"></i>
+                                        </div>
+                                        <!-- Single Form End -->
+                                    </div>
+                                    <div class="col-md-12">
+                                        <!-- Single Form Start -->
+                                        <div class="single-form">
+                                            <input type="text" placeholder="Website">
+                                            <i class="flaticon-worldwide"></i>
+                                        </div>
+                                        <!-- Single Form End -->
+                                    </div>
+                                    <div class="col-md-12">
+                                        <!-- Single Form Start -->
+                                        <div class="single-form">
+                                            <textarea placeholder="Message..."></textarea>
+                                            <i class="flaticon-edit"></i>
+                                        </div>
+                                        <!-- Single Form End -->
+                                    </div>
+                                </div>
+                                <!-- Blog Comments Button Start -->
+                                <div class="contact-btn">
+                                    <button class="btn" type="submit">Send Message</button>
+                                </div>
+                                <!-- Blog Comments Button End -->
+                            </form>
+                            <!-- Team Contact Form End -->
+                        </div>
+                    </div>
+                </div>
+            </div> {% endcomment %}
+        </div>
+        <!-- Team Contact End -->
+        {% endblock content %}
